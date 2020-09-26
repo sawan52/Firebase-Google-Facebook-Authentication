@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "69908206625",
+    "firebase_url": "https://fir-auth-facebook-69c33.firebaseio.com",
+    "project_id": "fir-auth-facebook-69c33",
+    "storage_bucket": "fir-auth-facebook-69c33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69908206625:android:2c8443d5badce864ae7f60",
+        "android_client_info": {
+          "package_name": "com.example.firebase_auth_google_facebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69908206625-998hef2kc9pgus64faado95auvihqba4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkscwc6ohyr_x5rXaJe3oBM2ibO40tWHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69908206625-998hef2kc9pgus64faado95auvihqba4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
