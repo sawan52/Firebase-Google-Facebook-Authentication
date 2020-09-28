@@ -21,10 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         int TIME_OUT = 2000;
 
-        /**
-         * If user is not authenticated then send him to SignInActivity to authenticate first,
-         * else send him to DashboardActivity
-         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
