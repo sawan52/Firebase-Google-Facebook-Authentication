@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,10 +25,6 @@ public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
-
-    public DashboardActivity(GoogleSignInClient mGoogleSignInClient) {
-        this.mGoogleSignInClient = mGoogleSignInClient;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,13 @@ public class DashboardActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        // Configure Google Sign In
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         String ID = Objects.requireNonNull(currentUser).getUid();
         String NAME = currentUser.getDisplayName();
